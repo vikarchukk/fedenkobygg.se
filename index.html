@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="./fonts/connect.css">
+
+    <style>
+
+        /* ---------- default ---------- */
+
+            ::-webkit-scrollbar {
+                width: 0;
+            }
+
+            :root {
+                --while: #EEEEEE;
+                --black: #101010;
+
+                --font_size_title: 30px;
+                --font_size_text: 20px;
+                --font_family_bold: 'Montserrat Bold', sans-serif;
+                --font_family_semi_bold: 'Montserrat Semi Bold', sans-serif;
+                --font_family_medium: 'Montserrat Medium', sans-serif;
+                --font_family_regular: 'Montserrat Regular', sans-serif;
+
+                --padding: 10px;
+                --gap_small: 10px;
+                --gap_big: 50px;
+                --border: 1px;
+            }
+
+            body {
+                background-color: var(--while);
+                margin: 0;
+                padding: 0;
+            }
+
+            .box {
+                max-width: 1280px;
+                padding: 0 10px;
+                margin: 0 auto;
+            }
+
+            section {
+                margin: 50px 0;
+            }
+
+            @media (max-width: 1300px) {
+
+                :root {
+                    --font_size_title: 25px;
+                    --gap_big: 10px;
+                }
+
+                section {
+                    margin: 10px 0;
+                }
+
+            }
+
+            /* ---------- font ---------- */
+
+                p, h1 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    font-style: inherit;
+                    color: inherit;
+                    text-align: inherit;
+                }
+
+                * {
+                    color: var(--black);
+                }
+
+            /* ---------- font ---------- */
+
+        /* ---------- default ---------- */
+
+        /* -------------------- section -------------------- */
+
+           /* ---------- header ---------- */
+
+                header {
+                    height: 100vh;
+                    width: 100%;
+                    background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
+
+                    border-bottom: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                }
+
+            /* ---------- header ---------- */
+
+            /* ---------- omoss ---------- */
+
+                /* .omoss */
+
+                .omoss_title {
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;  
+
+                    padding: var(--padding);
+
+                    font-family: var(--font_family_medium);
+                    font-size: var(--font_size_text);
+                    letter-spacing: 0.3px;
+                    text-align: center;
+                }
+
+            /* ---------- omoss ---------- */
+
+            /* ---------- tjenster ---------- */
+
+                /* .tjenster */
+
+                .tjenster_wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: var(--gap_big);
+                }
+
+                .tjenster_item {
+                    max-width: 615px;
+                    width: 100%;
+                    height: min-content;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                }
+
+                .tjenster_item:has(.tjenster_more_open) { 
+                    max-width: 100%; 
+                }
+
+                @media (max-width: 1300px) {
+
+                    .tjenster_item {
+                        max-width: 100%;
+                    }
+                }
+
+                /* ---------- more ---------- */
+
+                    .tjenster_more {
+                        max-width: 100%;
+                    }
+
+                    .tjenster_more_title {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        border-top: var(--border) solid var(--black);
+                        box-sizing: border-box;
+
+                        cursor: pointer;
+                        transition: all 250ms ease-in-out;
+
+                        padding: var(--padding);
+
+                        font-family: var(--font_family_medium);
+                        font-size: var(--font_size_text);
+                    }
+
+                    .tjenster_more_open > .tjenster_more_title { 
+                        color: var(--while);
+                        background-color: var(--black);
+                    }
+
+                    .tjenster_more_expand {
+                        position: relative;
+                        top: -1px;
+
+                        transition: all .5s ease;
+
+                        font-family: var(--font_family_regular);
+                        font-size: 25px;
+                        line-height: 0;
+                    }
+
+                    .tjenster_more_open > .tjenster_more_title .tjenster_more_expand { 
+                        transform: rotate(-225deg); 
+                        color: var(--while);
+                    }
+
+                    .tjenster_more_content {
+                        display: none; 
+                    }
+
+                    .tjenster_more_open > .tjenster_more_content { 
+                        display: block; 
+                    }
+
+                /* ---------- more ---------- */
+
+                /* ---------- text ---------- */
+
+                    .tjenster_title_img {
+                        width: 100%;
+                        height: 380px;
+                        background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
+                    }
+
+                    @media (max-width: 1300px) {
+
+                        .tjenster_title_img {
+                            height: 300px;
+                        }
+                    }
+
+                    .tjenster_title {
+                        border: var(--border) solid var(--black);
+                        box-sizing: border-box;  
+                        border-right: none;
+                        border-left: none;
+
+                        padding: var(--padding);
+
+                        font-family: var(--font_family_bold);
+                        font-size: var(--font_size_title);
+                    }
+
+                    .tjenster_service,
+                    .tjenster_more_text {
+                        padding: var(--padding);
+                    }
+
+                    .tjenster_service p {
+                        font-family: var(--font_family_semi_bold);
+                    }
+
+                    .tjenster_more_text p {
+                        font-family: var(--font_family_medium);
+                    }
+
+                    .tjenster_service p,
+                    .tjenster_more_text p {
+                        margin-bottom: var(--padding);
+                        font-size: var(--font_size_text);
+                    }
+
+                    .tjenster_service p:last-child, 
+                    .tjenster_more_text p:last-child {
+                        margin: 0;
+                    }
+
+                /* ---------- text ---------- */
+
+                /* ---------- img ---------- */
+
+                    /* .tjenster_more_projekt */
+
+                    .tjenster_more_projekt_title {
+                        display: flex;
+                        justify-content: space-between;
+
+                        width: 100%;
+                        padding-right: var(--padding);
+
+                        background: rgba(0, 0, 0, 0);
+                    }
+
+                    .tjenster_more_projekt_item {
+                        display: flex;
+                        flex-wrap: wrap;     
+                        gap: var(--gap_small);
+
+                        padding: var(--padding);
+                    }
+
+                    .tjenster_more_open > .tjenster_more_title > .tjenster_more_projekt_title {
+                        color: var(--while);
+                    }
+
+                    .tjenster_more_projekt_item div {
+                        height: 500px;
+                        width: calc(50% - 5px);
+
+                        background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
+                        
+                        border: var(--border) solid var(--black);
+                        box-sizing: border-box;  
+                    }
+
+                    @media (max-width: 1300px) {
+
+                        .tjenster_more_projekt_item div {
+                            height: 300px;
+                            width: 100%; 
+                        }
+
+                    }
+
+                /* ---------- img ---------- */
+
+            /* ---------- tjenster ---------- */
+
+            /* ---------- kontakt ---------- */
+
+                /* .kontakt */
+
+                /* .kontakt_wrap */
+
+                .kontakt_title {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    border-bottom: none;
+
+                    padding: var(--padding);
+
+                    font-family: var(--font_family_bold);
+                    font-size: var(--font_size_title);
+                    letter-spacing: 1px;
+                }
+
+                #form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                input, 
+                textarea {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    border-bottom: none;
+                    outline: none;
+                    border-radius: 0;
+
+                    background: rgba(0, 0, 0, 0);
+
+                    padding: var(--padding);
+
+                    font-family: var(--font_family_regular);
+                    font-size: var(--font_size_text);
+                }
+
+                textarea {
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 250px;
+                }
+
+                #form_button {
+                    width: 100%;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    outline: none;
+
+                    padding: var(--padding);
+
+                    cursor: pointer;
+                    transition: all 250ms ease-in-out;
+
+                    font-family: var(--font_family_semi_bold);
+                    font-size: var(--font_size_text);
+
+                    background: rgba(0, 0, 0, 0);
+                }
+
+                #form_button:hover { 
+                    color: var(--while); 
+                    background-color: var(--black);
+                }
+
+                #form_status:empty {
+                    display: none;
+                }
+
+                #form_status {
+                    width: 100%;
+                    height: 45px;
+
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+                    border-top: none;
+
+                    padding: var(--padding);
+
+                    font-family: var(--font_family_regular);
+                    font-size: var(--font_size_text);
+                    text-align: center;
+                }
+
+            /* ---------- kontakt ---------- */
+
+            /* ---------- footer ---------- */
+
+                /* footer */
+
+                .footer_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: var(--gap_big);
+                    padding-bottom: var(--gap_big);
+                }
+
+                .footer_wrap a {
+                    border: var(--border) solid var(--black);
+                    box-sizing: border-box;
+
+                    padding: var(--padding);
+
+                    font-family: var(--font_family_semi_bold);
+                    font-size: var(--font_size_text);
+                    text-decoration: none;
+                    text-align: center;
+                }
+
+                @media (max-width: 1300px) {
+
+                    .footer_wrap a {
+                        width: 100%;
+                    }
+                }
+
+            /* ---------- footer ---------- */
+
+        /* -------------------- section -------------------- */
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ---------- header ---------- -->
+
+        <header> </header>
+
+    <!-- ---------- header ---------- -->
+
+    <!-- ---------- omoss ---------- -->
+
+        <section class="omoss">
+            <div class="box">
+                <h1 class="omoss_title">Fedor - din pålitliga partner inom byggbranschen. Vi specialiserar oss på inre renoveringar, fasadarbeten och taktjänster. Vårt team består av fantastiska medarbetare med stor erfarenhet och kunskap. Vi arbetar i Stockholm men kan också ta oss an projekt över hela Sverige.</h1>
+            </div>
+        </section>
+
+    <!-- ---------- omoss ---------- -->
+
+    <!-- ---------- tjenster ---------- -->
+
+        <section class="tjenster">
+            <div class="box">
+                <div class="tjenster_wrap">
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img"></div>
+                            <h1 class="tjenster_title">TAK</h1>
+                            <div class="tjenster_service">
+                                <p>takarbete med takpannor</p>
+                                <p>metalltak</p>
+                                <p>lödning av taket</p>
+                                <p>skivtäckning</p>
+                            </div>
+            
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>läs mer om tak</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales efficitur erat, id malesuada ante luctus at. Donec convallis volutpat pretium. Vestibulum in convallis dolor. Nunc euismod, justo a venenatis tincidunt, magna lorem aliquet magna, sit amet gravida ligula elit vel diam. Donec non lectus sagittis, sollicitudin nunc eget, vehicula metus. Sed dictum ex id aliquam placerat. Etiam eu laoreet turpis. Curabitur volutpat hendrerit arcu eu maximus. Nam aliquet in turpis eu tincidunt. Proin id orci lorem. Nam eu ultricies turpis, cursus feugiat quam. Duis eu metus sed ligula hendrerit bibendum at vitae tellus. Ut nisi eros, sollicitudin non risus non, commodo aliquet felis. Nam consequat, justo ac pulvinar tempus, odio ex lacinia nunc, nec porttitor urna neque ac mi. Quisque fringilla purus scelerisque tellus ullamcorper vestibulum. Mauris sed ex nec velit rhoncus convallis at sed eros</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+                                        
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>takarbete med takpannor</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>metalltak</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>lödning av taket</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img"></div>
+                            <h1 class="tjenster_title">FASAD</h1>
+                            <div class="tjenster_service">
+                                <p>isolering</p>
+                                <p>målning</p>
+                                <p>byte</p>
+                                <p>arbete av alla svårighetsgrader</p>
+                            </div>
+            
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>läs mer om fasad</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales efficitur erat, id malesuada ante luctus at. Donec convallis volutpat pretium. Vestibulum in convallis dolor. Nunc euismod, justo a venenatis tincidunt, magna lorem aliquet magna, sit amet gravida ligula elit vel diam. Donec non lectus sagittis, sollicitudin nunc eget, vehicula metus. Sed dictum ex id aliquam placerat. Etiam eu laoreet turpis. Curabitur volutpat hendrerit arcu eu maximus. Nam aliquet in turpis eu tincidunt. Proin id orci lorem. Nam eu ultricies turpis, cursus feugiat quam. Duis eu metus sed ligula hendrerit bibendum at vitae tellus. Ut nisi eros, sollicitudin non risus non, commodo aliquet felis. Nam consequat, justo ac pulvinar tempus, odio ex lacinia nunc, nec porttitor urna neque ac mi. Quisque fringilla purus scelerisque tellus ullamcorper vestibulum. Mauris sed ex nec velit rhoncus convallis at sed eros</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+                                        
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>isolering</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>målning</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>byte</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>arbete av alla svårighetsgrader</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                    <div class="tjenster_item">
+
+                        <!-- ---------- text ---------- -->
+
+                            <div class="tjenster_title_img"></div>
+                            <h1 class="tjenster_title">INRE RENOVERING</h1>
+                            <div class="tjenster_service">
+                                <p>köksrenovering</p>
+                                <p>badrumsrenovering</p>
+                                <p>gipsarbete</p>
+                                <p>isolering</p>
+                                <p>kakelläggning</p>
+                                <p>målning</p>
+                                <p>spackling</p>
+                            </div>
+            
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>läs mer om inre renovering</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales efficitur erat, id malesuada ante luctus at. Donec convallis volutpat pretium. Vestibulum in convallis dolor. Nunc euismod, justo a venenatis tincidunt, magna lorem aliquet magna, sit amet gravida ligula elit vel diam. Donec non lectus sagittis, sollicitudin nunc eget, vehicula metus. Sed dictum ex id aliquam placerat. Etiam eu laoreet turpis. Curabitur volutpat hendrerit arcu eu maximus. Nam aliquet in turpis eu tincidunt. Proin id orci lorem. Nam eu ultricies turpis, cursus feugiat quam. Duis eu metus sed ligula hendrerit bibendum at vitae tellus. Ut nisi eros, sollicitudin non risus non, commodo aliquet felis. Nam consequat, justo ac pulvinar tempus, odio ex lacinia nunc, nec porttitor urna neque ac mi. Quisque fringilla purus scelerisque tellus ullamcorper vestibulum. Mauris sed ex nec velit rhoncus convallis at sed eros</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- text ---------- -->
+
+                        <!-- ---------- img ---------- -->
+
+                            <div class="tjenster_more">
+                                <div class="tjenster_more_title">
+                                    <p>projekt</p>
+                                    <span class="tjenster_more_expand">+</span>
+                                </div>
+                                <div class="tjenster_more_content">
+                                    <div class="tjenster_more_projekt">
+                                        
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>köksrenovering</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>badrumsrenovering</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>gipsarbete</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>kakelläggning</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>målning</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>spackling</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- ---------- img ---------- -->
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <!-- ---------- tjenster ---------- -->
+     
+    <!-- ---------- kontakt ---------- -->
+
+        <section class="kontakt">
+            <div class="box">
+                <div class="kontakt_wrap">
+                    <h1 class="kontakt_title">OFFERTFÖRFRÅGAN</h1>
+                    <form id="form" action="https://formspree.io/f/xaygkawe" method="POST">
+                        <input type="text" name="namn" placeholder="namn">
+                        <input type="email" name="email" placeholder="e-post">
+                        <input type="text" name="telefon" placeholder="telefonnummer">
+                        <input type="text" name="projekt" placeholder="projekt">
+                        <textarea type="text" name="message" placeholder="beskriv ditt projekt"></textarea>
+                        <button id="form_button" type="submit">skicka</button>
+                        <p id="form_status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    <!-- ---------- kontakt ---------- -->
+
+    <!-- ---------- footer ---------- -->
+
+        <footer>
+            <div class="box">
+                <div class="footer_wrap">
+                    <a href="#!">email: info@fedor_bygg.se</a>
+                    <a href="#!">number: +46769530341</a>
+                    <a href="#!">instagram: @fedor_bygg</a>
+                    <a href="#!">facebook: fedor_bygg</a>
+                    <a href="#!">tiktok: fedor_bygg</a>
+                </div>
+            </div>
+        </footer>
+
+    <!-- ---------- footer ---------- -->
+
+    <script>
+
+        /* ---------- tjenster_more ---------- */
+
+            document.querySelectorAll('.tjenster_more_title').forEach((item) =>
+                item.addEventListener('click', () => {
+                    const parent = item.parentNode;
+                    parent.classList.contains('tjenster_more_open') ? parent.classList.remove('tjenster_more_open') : parent.classList.toggle('tjenster_more_open');
+                })
+            )
+
+        /* ---------- tjenster_more ---------- */
+
+        /* ---------- kontakt ---------- */
+
+            var form = document.getElementById("form");
+
+            async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("form_status");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        status.innerHTML = "Thanks for your submission!";
+                        form.reset()
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                            } else {
+                                status.innerHTML = "There was a problem submitting your form"
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    status.innerHTML = "There was a problem submitting your form"
+                });
+            }
+
+            form.addEventListener("submit", handleSubmit)
+
+        /* ---------- kontakt ---------- */
+        
+    </script>
+
+</body>
+
+</html>
