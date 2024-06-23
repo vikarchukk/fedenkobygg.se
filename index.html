@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <title>Fedor Bygg</title>
+
     <link rel="stylesheet" href="./fonts/connect.css">
 
     <style>
@@ -24,7 +26,6 @@
                 --font_family_bold: 'Montserrat Bold', sans-serif;
                 --font_family_semi_bold: 'Montserrat Semi Bold', sans-serif;
                 --font_family_medium: 'Montserrat Medium', sans-serif;
-                --font_family_regular: 'Montserrat Regular', sans-serif;
 
                 --padding: 10px;
                 --gap_small: 10px;
@@ -178,7 +179,7 @@
 
                         transition: all .5s ease;
 
-                        font-family: var(--font_family_regular);
+                        font-family: var(--font_family_medium);
                         font-size: 25px;
                         line-height: 0;
                     }
@@ -287,11 +288,18 @@
                         box-sizing: border-box;  
                     }
 
-                    @media (max-width: 1300px) {
+                    @media (max-width: 1000px) {
 
                         .tjenster_more_projekt_item div {
-                            height: 300px;
-                            width: 100%; 
+                            width: 100%;
+                        }
+
+                    }
+
+                    @media (max-width: 600px) {
+
+                        .tjenster_more_projekt_item div {
+                            height: 350px;
                         }
 
                     }
@@ -340,7 +348,7 @@
 
                     padding: var(--padding);
 
-                    font-family: var(--font_family_regular);
+                    font-family: var(--font_family_medium);
                     font-size: var(--font_size_text);
                 }
 
@@ -387,7 +395,7 @@
 
                     padding: var(--padding);
 
-                    font-family: var(--font_family_regular);
+                    font-family: var(--font_family_medium);
                     font-size: var(--font_size_text);
                     text-align: center;
                 }
@@ -416,7 +424,7 @@
                     font-family: var(--font_family_semi_bold);
                     font-size: var(--font_size_text);
                     text-decoration: none;
-                    text-align: center;
+                    /* text-align: center; */
                 }
 
                 @media (max-width: 1300px) {
@@ -465,10 +473,10 @@
                             <div class="tjenster_title_img"></div>
                             <h1 class="tjenster_title">TAK</h1>
                             <div class="tjenster_service">
-                                <p>takarbete med takpannor</p>
-                                <p>metalltak</p>
-                                <p>lödning av taket</p>
-                                <p>skivtäckning</p>
+                                <p>- takarbete med takpannor</p>
+                                <p>- metalltak</p>
+                                <p>- lödning av taket</p>
+                                <p>- skivtäckning</p>
                             </div>
             
                             <div class="tjenster_more">
@@ -555,10 +563,10 @@
                             <div class="tjenster_title_img"></div>
                             <h1 class="tjenster_title">FASAD</h1>
                             <div class="tjenster_service">
-                                <p>isolering</p>
-                                <p>målning</p>
-                                <p>byte</p>
-                                <p>arbete av alla svårighetsgrader</p>
+                                <p>- isolering</p>
+                                <p>- målning</p>
+                                <p>- byte</p>
+                                <p>- arbete av alla svårighetsgrader</p>
                             </div>
             
                             <div class="tjenster_more">
@@ -659,13 +667,13 @@
                             <div class="tjenster_title_img"></div>
                             <h1 class="tjenster_title">INRE RENOVERING</h1>
                             <div class="tjenster_service">
-                                <p>köksrenovering</p>
-                                <p>badrumsrenovering</p>
-                                <p>gipsarbete</p>
-                                <p>isolering</p>
-                                <p>kakelläggning</p>
-                                <p>målning</p>
-                                <p>spackling</p>
+                                <p>- köksrenovering</p>
+                                <p>- badrumsrenovering</p>
+                                <p>- gipsarbete</p>
+                                <p>- isolering</p>
+                                <p>- kakelläggning</p>
+                                <p>- målning</p>
+                                <p>- spackling</p>
                             </div>
             
                             <div class="tjenster_more">
@@ -792,7 +800,7 @@
         </section>
 
     <!-- ---------- tjenster ---------- -->
-     
+
     <!-- ---------- kontakt ---------- -->
 
         <section class="kontakt">
@@ -803,6 +811,7 @@
                         <input type="text" name="namn" placeholder="namn">
                         <input type="email" name="email" placeholder="e-post">
                         <input type="text" name="telefon" placeholder="telefonnummer">
+                        <input type="text" name="plats" placeholder="plats">
                         <input type="text" name="projekt" placeholder="projekt">
                         <textarea type="text" name="message" placeholder="beskriv ditt projekt"></textarea>
                         <button id="form_button" type="submit">skicka</button>
