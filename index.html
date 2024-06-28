@@ -18,11 +18,15 @@
             }
 
             :root {
-                --while: #EEEEEE;
-                --black: #101010;
+                /* --while: #EEEEEE; */
+                /* --black: #101010; */
+
+                --while: #ffffff;
+                --black: #000000;
 
                 --font_size_title: 30px;
                 --font_size_text: 20px;
+                --font_family_extra_bold: 'Montserrat Extra Bold', sans-serif;
                 --font_family_bold: 'Montserrat Bold', sans-serif;
                 --font_family_semi_bold: 'Montserrat Semi Bold', sans-serif;
                 --font_family_medium: 'Montserrat Medium', sans-serif;
@@ -92,8 +96,65 @@
                     width: 100%;
                     background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
                     border-bottom: var(--border) solid var(--black);
-                    /* box-sizing: border-box; */
+
+                    font-family: var(--font_family_extra_bold);
+                    font-size: 100px;
+                }
+
+                header svg {
+                    width: 400px;
+                    height: 400px;
+                    transform: rotate(-45deg);
+                    transition: transform 1s ease;
+                }
+
+                /* header svg:hover {
+                    transform: rotate(-100deg);
+                } */
+
+                @media (max-width: 900px) {
+
+                    header {
+                        font-size: 70px;
+                    }
+
+                    header svg {
+                        width: 270px;
+                        height: 270px;
+                    }
+
+                }
+
+                @media (max-width: 650px) {
+
+                    header {
+                        font-size: 50px;
+                    }
+
+                    header svg {
+                        width: 230px;
+                        height: 230px;
+                    }
+
+                }
+
+                @media (max-width: 400px) {
+
+                    header {
+                        font-size: 45px;
+                    }
+
+                    header svg {
+                        width: 180px;
+                        height: 180px;
+                    }
+
                 }
 
             /* ---------- header ---------- */
@@ -446,7 +507,13 @@
 
     <!-- ---------- header ---------- -->
 
-        <header> </header>
+        <header>
+            <svg viewBox="0 0 155 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="60" y="49.9937" width="35" height="170" fill="black"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0037 0H0V34.9884H14.0032L19.4 25.8984H35.6L40.9968 34.9884H155L120 0H40.9963L35.6 9.08909H19.4L14.0037 0Z" fill="black"/>
+            </svg>
+            <h1>FEDOR BYGG</h1>
+        </header>
 
     <!-- ---------- header ---------- -->
 
@@ -454,7 +521,7 @@
 
         <section class="omoss">
             <div class="box">
-                <h1 class="omoss_title">Fedor - din pålitliga partner inom byggbranschen. Vi specialiserar oss på inre renoveringar, fasadarbeten och taktjänster. Vårt team består av fantastiska medarbetare med stor erfarenhet och kunskap. Vi arbetar i Stockholm men kan också ta oss an projekt över hela Sverige.</h1>
+                <h1 class="omoss_title">Fedor Bygg - din pålitliga partner inom byggbranschen. Vi specialiserar oss på inre renoveringar, fasadarbeten och taktjänster. Vårt team består av fantastiska medarbetare med stor erfarenhet och kunskap. Vi arbetar i Stockholm men kan också ta oss an projekt över hela Sverige.</h1>
             </div>
         </section>
 
@@ -873,6 +940,17 @@
     <!-- ---------- footer ---------- -->
 
     <script>
+
+        /* ---------- header safari ---------- */
+
+        const isIOS = /iPad|iPhone/.test(navigator.userAgent) && !window.MSStream;
+        const isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS');
+
+        if (isIOS && isSafari) {
+            document.querySelector('header').style.height = 'calc(100vh - 89px)';
+        }
+
+        /* ---------- header safari ---------- */
 
         /* ---------- tjenster_more ---------- */
 
