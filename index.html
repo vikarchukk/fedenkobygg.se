@@ -26,6 +26,7 @@
                 --font_family_bold: 'Montserrat Bold', sans-serif;
                 --font_family_semi_bold: 'Montserrat Semi Bold', sans-serif;
                 --font_family_medium: 'Montserrat Medium', sans-serif;
+                --font_family_regular: 'Montserrat Regular', sans-serif;
 
                 --padding: 10px;
                 --gap_small: 10px;
@@ -92,7 +93,7 @@
                     background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
 
                     border-bottom: var(--border) solid var(--black);
-                    box-sizing: border-box;
+                    /* box-sizing: border-box; */
                 }
 
             /* ---------- header ---------- */
@@ -179,7 +180,7 @@
 
                         transition: all .5s ease;
 
-                        font-family: var(--font_family_medium);
+                        font-family: var(--font_family_regular);
                         font-size: 25px;
                         line-height: 0;
                     }
@@ -256,14 +257,17 @@
 
                     /* .tjenster_more_projekt */
 
-                    .tjenster_more_projekt_title {
-                        display: flex;
-                        justify-content: space-between;
+                    .tjenster_more_projekt_service {
+                        /* border-top: var(--border) solid var(--black); */
+                        /* box-sizing: border-box; */
 
-                        width: 100%;
-                        padding-right: var(--padding);
+                        padding: var(--padding);
 
-                        background: rgba(0, 0, 0, 0);
+                        color: var(--while);
+                        background-color: var(--black);
+
+                        font-family: var(--font_family_medium);
+                        font-size: var(--font_size_text);
                     }
 
                     .tjenster_more_projekt_item {
@@ -272,10 +276,6 @@
                         gap: var(--gap_small);
 
                         padding: var(--padding);
-                    }
-
-                    .tjenster_more_open > .tjenster_more_title > .tjenster_more_projekt_title {
-                        color: var(--while);
                     }
 
                     .tjenster_more_projekt_item div {
@@ -502,10 +502,12 @@
                                 </div>
                                 <div class="tjenster_more_content">
                                     <div class="tjenster_more_projekt">
+
+                                        <h1 class="tjenster_more_projekt_service">takarbete med takpannor</h1>
                                         
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>takarbete med takpannor</p>
+                                                <p>danderyd, 7d</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -521,7 +523,25 @@
 
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>metalltak</p>
+                                                <p>ekerö</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">metalltak</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>vasastan, 70 kvm</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -532,9 +552,11 @@
                                             </div>
                                         </div>
 
+                                        <h1 class="tjenster_more_projekt_service">lödning av taket</h1>
+
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>lödning av taket</p>
+                                                <p>östermalm</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -592,10 +614,12 @@
                                 </div>
                                 <div class="tjenster_more_content">
                                     <div class="tjenster_more_projekt">
+
+                                        <h1 class="tjenster_more_projekt_service">isolering</h1>
                                         
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>isolering</p>
+                                                <p>ekerö</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -610,7 +634,24 @@
 
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>målning</p>
+                                                <p>vasastan</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">målning</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>östermalm</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -625,27 +666,11 @@
 
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>byte</p>
+                                                <p>danderyd</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
                                                 <div class="tjenster_more_projekt_item">
-                                                    <div></div>
-                                                    <div></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tjenster_more">
-                                            <div class="tjenster_more_title">
-                                                <p>arbete av alla svårighetsgrader</p>
-                                                <span class="tjenster_more_expand">+</span>
-                                            </div>
-                                            <div class="tjenster_more_content">
-                                                <div class="tjenster_more_projekt_item">
-                                                    <div></div>
-                                                    <div></div>
-                                                    <div></div>
                                                     <div></div>
                                                     <div></div>
                                                 </div>
@@ -699,10 +724,12 @@
                                 </div>
                                 <div class="tjenster_more_content">
                                     <div class="tjenster_more_projekt">
+
+                                        <h1 class="tjenster_more_projekt_service">köksrenovering</h1>
                                         
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>köksrenovering</p>
+                                                <p>danderyd</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -717,7 +744,56 @@
 
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>badrumsrenovering</p>
+                                                <p>ekerö</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">gipsarbete</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>österåker</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">kakelläggning</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>östermalm</p>
+                                                <span class="tjenster_more_expand">+</span>
+                                            </div>
+                                            <div class="tjenster_more_content">
+                                                <div class="tjenster_more_projekt_item">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h1 class="tjenster_more_projekt_service">målning</h1>
+
+                                        <div class="tjenster_more">
+                                            <div class="tjenster_more_title">
+                                                <p>danderyd</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
@@ -730,50 +806,7 @@
 
                                         <div class="tjenster_more">
                                             <div class="tjenster_more_title">
-                                                <p>gipsarbete</p>
-                                                <span class="tjenster_more_expand">+</span>
-                                            </div>
-                                            <div class="tjenster_more_content">
-                                                <div class="tjenster_more_projekt_item">
-                                                    <div></div>
-                                                    <div></div>
-                                                    <div></div>
-                                                    <div></div>
-                                                    <div></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tjenster_more">
-                                            <div class="tjenster_more_title">
-                                                <p>kakelläggning</p>
-                                                <span class="tjenster_more_expand">+</span>
-                                            </div>
-                                            <div class="tjenster_more_content">
-                                                <div class="tjenster_more_projekt_item">
-                                                    <div></div>
-                                                    <div></div>
-                                                    <div></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tjenster_more">
-                                            <div class="tjenster_more_title">
-                                                <p>målning</p>
-                                                <span class="tjenster_more_expand">+</span>
-                                            </div>
-                                            <div class="tjenster_more_content">
-                                                <div class="tjenster_more_projekt_item">
-                                                    <div></div>
-                                                    <div></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tjenster_more">
-                                            <div class="tjenster_more_title">
-                                                <p>spackling</p>
+                                                <p>vasastan</p>
                                                 <span class="tjenster_more_expand">+</span>
                                             </div>
                                             <div class="tjenster_more_content">
